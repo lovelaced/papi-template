@@ -1,0 +1,151 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0d0d0d, #151515);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  min-height: 80vh;
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  border: 2px solid #e6007a; /* Polkadot pink accent */
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  background: linear-gradient(90deg, #ff6ec7, #e6007a); /* Polkadot colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.loading-message {
+  font-size: 1.8rem;
+  color: #ff6ec7; /* Polkadot branding */
+  font-weight: 500;
+  animation: pulse 1.5s infinite;
+}
+
+.error-message {
+  font-size: 1.8rem;
+  color: #ff4d4d; /* Error red */
+  font-weight: 600;
+  animation: shake 0.5s ease-in-out;
+}
+
+.block-info {
+  display: flex;
+  flex-direction: column;
+  background: #262626;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.block-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.block-label {
+  font-size: 1.4rem;
+  color: #b3b3b3;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.block-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #4caf50; /* Sleek green */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #888888;
+}
+
+.footer p {
+  margin: 0;
+  color: #666;
+}
+
+.footer p:hover {
+  color: #e6007a;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
