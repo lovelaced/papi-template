@@ -20,21 +20,23 @@ don't worry about manual setup — there’s a script for that. here’s how you
    cd papi-template
    ```
 
-2. **run the setup script**:
+2. **install deps**:
    ```bash
-   ./papi-install.sh
+   npm install 
    ```
-   this script does two things:
-   - sets up polkadot-api.
-   - installs all the node modules.
 
-3. **run the app**:
+3. **generate papi descriptors**:
+   ```bash
+   npx papi generate
+   ```
+
+4. **run the app**:
    ```bash
    npm run dev
    ```
    this is the magic command. it spins up the dev server and launches the app in your default browser. the app should pop up at `http://localhost:5173`. the block number should start showing up shortly after.
 
-**tl;dr**: clone, run the script, then `npm run dev`.
+**tl;dr**: clone, install deps, then `npm run dev`.
 
 ---
 
